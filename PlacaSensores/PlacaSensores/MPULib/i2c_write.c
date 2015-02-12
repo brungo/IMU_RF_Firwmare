@@ -70,7 +70,7 @@ uint8_t i2c_write_m ( void *const data, const uint8_t n)
 
 uint8_t i2c_write(unsigned char slave_addr, unsigned char reg_addr, unsigned char length, unsigned char const *data)
 {
-	uint8_t aux_buff[16];			// Nunca se van a mandar por i2c a un slave en esta implementación mas 16 datos (sobredimensionado)
+	uint8_t aux_buff[16];			// Nunca se van a mandar por i2c a un slave en esta implementación mas de 16 datos (sobredimensionado)
 	uint8_t i;
 	aux_buff[0] = slave_addr;
 	aux_buff[1] = reg_addr;
